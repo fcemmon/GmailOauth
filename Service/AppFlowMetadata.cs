@@ -16,11 +16,11 @@ namespace GmailOAuth.Service
             {
                 ClientSecrets = new ClientSecrets
                 {
-                    ClientId = "312582055255-9da1thomnpe5q11c2vcp8tjaqlhq4hnv.apps.googleusercontent.com",
-                    ClientSecret = "Ai3IVqqYnJNgVL4vbYKR5irB"
+                    ClientId = "180602927859-ehluudns2b03kpffstnvfkhg7hoqifak.apps.googleusercontent.com",
+                    ClientSecret = "iy4_5FbDCPzFuE5fcPySlLQR"
                 },
                 Scopes = new[] { GmailService.Scope.GmailModify, GmailService.Scope.GmailReadonly },
-                DataStore = new FileDataStore("E:\\Projects\\Marko Dupor", true)
+                DataStore = new FileDataStore(System.Web.HttpContext.Current.Server.MapPath("/json-file"), true)
             });
 
         public override string GetUserId(Controller controller)
